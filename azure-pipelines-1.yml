@@ -26,7 +26,7 @@ stages:
       displayName: Build and Push Docker Image
       inputs:
         containerRegistry: 'docker_connection'
-        repository: 'Rajshekhar1901/docker'
+        repository: 'rajshekharkg/docker_connection'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
