@@ -19,15 +19,15 @@ stages:
     - task: Docker@2
       displayName: Login to Docker Hub
       inputs:
-        command: login
-        containerRegistry: 'Rajshekhar1901/docker'
+        containerRegistry: 'docker_connection'
+        command: 'login'
  
     - task: Docker@2
       displayName: Build and Push Docker Image
       inputs:
-        containerRegistry: 'docker-hub'
-        repository: 'Rajshekhar1901/docker'
-        command: buildAndPush
+        containerRegistry: 'docker_connection'
+        repository: 'docker'
+        command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
